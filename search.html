@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/foundation.css" />
   </head>
-  <body style="background-color: rgba(0,0,0,0);">
+  <body style="background-color: #444c63;">
         <div class="row">
     <div class="large-12 columns">
  
@@ -34,45 +33,14 @@
               <!-- Right Nav Section -->
               <ul class="right">
                 <li class="divider"></li>
-                <li class="has-dropdown">
-                  <a href="#">Main Item 1</a>
-                  <ul class="dropdown">
-                    <li><label>Section Name</label></li>
-                    <li class="has-dropdown">
-                      <a href="#" class="">Has Dropdown, Level 1</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Dropdown Options</a></li>
-                        <li><a href="#">Dropdown Options</a></li>
-                        <li><a href="#">Level 2</a></li>
-                        <li><a href="#">Subdropdown Option</a></li>
-                        <li><a href="#">Subdropdown Option</a></li>
-                        <li><a href="#">Subdropdown Option</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li class="divider"></li>
-                    <li><label>Section Name</label></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">See all →</a></li>
-                  </ul>
+                <li>
+                  <a href="#">My Profile</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="#">Main Item 2</a></li>
+                <li>
+					<a href="#">Search</a>
+				</li>
                 <li class="divider"></li>
-                <li class="has-dropdown">
-                  <a href="#">Main Item 3</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">See all →</a></li>
-                  </ul>
-                </li>
               </ul>
             </section>
           </nav>
@@ -88,12 +56,20 @@
  
         <div class="large-4 small-12 columns">
  
-          <img src="http://placehold.it/500x500&text=Logo">
- 
           <div class="hide-for-small panel">
-            <h3>Header</h3>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-            </h5>
+			<a href="#" data-dropdown="drop1">Has Dropdown</a>
+			<ul id="drop1" class="f-dropdown " data-dropdown-content>
+			  <li><a href="#">This is a link</a></li>
+			  <li><a href="#">This is another</a></li>
+			  <li><a href="#">Yet another</a></li>
+			</ul>
+
+			<a href="#" data-dropdown="drop1">Has Dropdown</a>
+			<ul id="drop1" class="f-dropdown" data-dropdown-content>
+			  <li><a href="#">This is a link</a></li>
+			  <li><a href="#">This is another</a></li>
+			  <li><a href="#">Yet another</a></li>
+			</ul>
           </div>
  
           <a href="#">
@@ -169,61 +145,31 @@
  
     <!-- End Thumbnails -->
  
- 
-    <!-- Managed By -->
-          <div class="row">
-            <div class="large-12 columns">
-              <div class="panel">
-                <div class="row">
- 
-                  <div class="large-2 small-6 columns">
-                    <img src="http://placehold.it/300x300&text=Site Owner">
-                  </div>
- 
-                  <div class="large-10 small-6 columns">
-                    <strong>This Site Is Managed By<hr/></strong>
- 
-                    Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
-                  </div>
- 
-                </div>
-              </div>
-            </div>
- 
-    <!-- End Managed By -->
- 
           </div>
         </div>
       </div>
  
  
-    <!-- Footer -->
- 
-      <footer class="row">
-        <div class="large-12 columns"><hr />
-          <div class="row">
- 
-            <div class="large-6 columns">
-              <p>© Copyright no one at all. Go to town.</p>
-            </div>
- 
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-              </ul>
-            </div>
- 
-          </div>
-        </div>
-      </footer>
- 
-    <!-- End Footer -->
- 
     </div>
   </div>
-    
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/foundation/foundation.min.js"></script> 
+	
+    <script type="text\JavaScript">
+	$(document).foundation();
+	$(function() {
+	var availableTags = [
+	"Hyderabad",
+	"Delhi",
+	"Mumbai",
+	"Jaipur"
+	];
+	$( "#tags" ).autocomplete({
+	source: availableTags
+	});
+	});
+</script>
   </body>
 </html>
