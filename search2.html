@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <body onload="window.app.login();">
+<script src='lib/shred.bundle.js' type='text/javascript'></script>
+<script src='lib/swagger.js' type='text/javascript'></script>
+<script src='lib/sdk-init.js' type='text/javascript'></script>
+<!--<script src='app.js' type='text/javascript'></script>-->
+<script src="search.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/foundation.css" />
+  </head>
+  <body style="background-color: #444c63;">
+        <div class="row">
+    <div class="large-12 columns">
+ 
+    <!-- Navigation -->
+ 
+      <div class="row">
+        <div class="large-12 columns">
+ 
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+              <!-- Title Area -->
+              <li class="name">
+                <h1>
+                  <a href="#">
+                    <img class="logo-image-topbar" src="images/logo.png"/>
+                  </a>
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+            <section class="top-bar-section">
+              <!-- Right Nav Section -->
+              <ul class="right">
+                <li class="divider"></li>
+                <li>
+                  <a href="#">My Profile</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+					<a href="#">Search</a>
+				</li>
+                <li class="divider"></li>
+              </ul>
+            </section>
+          </nav>
+          <!-- End Top Bar -->
+        </div>
+      </div>
+ 
+    <!-- End Navigation -->
+ 
+      <div class="row">
+ 
+  <!-- Side Bar -->
+ 
+        <div class="large-4 small-12 columns">
+ 
+          <div class="hide-for-small panel">
+			<table>
+<tr>
+<td><select name="mood" id="mood">
+ <option selected="selected" disabled="disabled">Mood</option> 
+  <option value="Party">Party</option>
+  <option value="Adventures">Adventures</option>
+  <option value="boring">Boring</option>
+  <option value="party">party</option>
+</select></td>
+</tr>
+<tr>
+<td><select name="location" id="location"> 
+   <option selected="selected" disabled="disabled">Location</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Gujrat">Gujrat</option>
+  <option value="Araku">Araku</option>
+  <option value="Delhi">Delhi</option>
+</select></td>
+</tr>
+<tr><td><input type="button" value="Search" name="Search" id="search" onclick="window.app.getTodos();" /></td></tr>
+</table>
+          </div>
+ 
+          <a href="#">
+          <div class="panel callout radius">
+            <h6>6 events in Adventures at Hyderabad</h6>
+          </div>
+          </a>
+ 
+        </div>
+ 
+    <!-- End Side Bar -->
+ 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+          <div class="row">
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/1.jpg">
+ 
+              <div class="panel">
+                <h5>Fun@Ocean Park</h5>
+                <h6 class="subheader">2014-05-20</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/2.jpg">
+ 
+              <div class="panel">
+                <h5>F2 Fun ride</h5>
+                <h6 class="subheader">2014-05-25</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/3.jpg">
+ 
+              <div class="panel">
+                <h5>Trekking</h5>
+                <h6 class="subheader">2014-06-02</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/4.jpg">
+ 
+              <div class="panel">
+                <h5>Boating Ride</h5>
+                <h6 class="subheader">2014-06-10</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/5.jpg">
+ 
+              <div class="panel">
+                <h5>Night safari park</h5>
+                <h6 class="subheader">2014-06-21</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="images/6.jpg">
+ 
+              <div class="panel">
+                <h5>Sky Diving</h5>
+                <h6 class="subheader">2014-06-10</h6>
+              </div>
+            </div>
+          </div>
+ 
+    <!-- End Thumbnails -->
+ 
+          </div>
+        </div>
+      </div>
+ 
+ 
+    </div>
+  </div>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/foundation/foundation.min.js"></script> 
+	
+    <script type="text\JavaScript">
+	$(document).foundation();
+	$(function() {
+	var availableTags = [
+	"Hyderabad",
+	"Delhi",
+	"Mumbai",
+	"Jaipur"
+	];
+	$( "#tags" ).autocomplete({
+	source: availableTags
+	});
+	});
+</script>
+  </body>
+</html>
